@@ -16,7 +16,7 @@ from datetime import date, timedelta
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from ledgerlens.fees import expected_fee  # noqa: E402
+from ledgerlens.fees import expected_fee
 
 PAYERS = [
     "Acme Supply Co.", "Brightline Dental LLC", "Cedar Ridge Property Group", "Delmarva Logistics Inc.",

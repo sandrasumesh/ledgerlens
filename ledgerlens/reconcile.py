@@ -136,7 +136,7 @@ def reconcile(
             ((open_entries["net"] - txn["amount"]).abs() < 0.005)
             & ((open_entries["date"] - txn["date"]).abs() <= timedelta(days=date_window_days))
         ]
-        cands = cands[cands["payer"].map(lambda p: names_match(p, txn["counterparty"]))]
+        cands = cands[cands["payer"].map(lambda p, cp=txn["counterparty"]: names_match(p, cp))]
         if len(cands) == 1:
             eid = cands.iloc[0]["entry_id"]
             matched_entry[eid] = txn["txn_id"]

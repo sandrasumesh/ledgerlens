@@ -3,5 +3,5 @@
 from .data import load_bank, load_ledger
 from .reconcile import Finding, ReconciliationResult, reconcile
 
-__all__ = ["load_bank", "load_ledger", "reconcile", "Finding", "ReconciliationResult"]
+__all__ = ["Finding", "ReconciliationResult", "load_bank", "load_ledger", "reconcile"]
 __version__ = "0.1.0"

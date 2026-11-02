@@ -10,13 +10,14 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 sys.path.insert(0, str(ROOT / "scripts"))
 
-from generate_sample_data import build  # noqa: E402
-from ledgerlens.agent import ReconciliationAgent, offline_summary  # noqa: E402
-from ledgerlens.data import DataError, load_bank, load_ledger  # noqa: E402
-from ledgerlens.evaluate import score  # noqa: E402
-from ledgerlens.fees import expected_fee  # noqa: E402
-from ledgerlens.reconcile import names_match, reconcile  # noqa: E402
-from ledgerlens.store import LedgerStore, QueryError  # noqa: E402
+from generate_sample_data import build
+
+from ledgerlens.agent import ReconciliationAgent, offline_summary
+from ledgerlens.data import DataError, load_bank, load_ledger
+from ledgerlens.evaluate import score
+from ledgerlens.fees import expected_fee
+from ledgerlens.reconcile import names_match, reconcile
+from ledgerlens.store import LedgerStore, QueryError
 
 
 def frames(seed):
