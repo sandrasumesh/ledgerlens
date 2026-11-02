@@ -1,0 +1,78 @@
+[
+  {
+    "type": "FEE_MISCALC",
+    "id": "PMT-1091"
+  },
+  {
+    "type": "FEE_MISCALC",
+    "id": "PMT-1072"
+  },
+  {
+    "type": "FEE_MISCALC",
+    "id": "PMT-1118"
+  },
+  {
+    "type": "FEE_MISCALC",
+    "id": "PMT-1210"
+  },
+  {
+    "type": "AMOUNT_MISMATCH",
+    "id": "PMT-1092"
+  },
+  {
+    "type": "AMOUNT_MISMATCH",
+    "id": "PMT-1038"
+  },
+  {
+    "type": "AMOUNT_MISMATCH",
+    "id": "PMT-1232"
+  },
+  {
+    "type": "DUPLICATE_PAYMENT",
+    "id": "PMT-1229"
+  },
+  {
+    "type": "DUPLICATE_PAYMENT",
+    "id": "PMT-1179"
+  },
+  {
+    "type": "UNMATCHED_LEDGER",
+    "id": "PMT-1198"
+  },
+  {
+    "type": "UNMATCHED_LEDGER",
+    "id": "PMT-1157"
+  },
+  {
+    "type": "UNMATCHED_LEDGER",
+    "id": "PMT-1084"
+  },
+  {
+    "type": "PAYEE_MISMATCH",
+    "id": "PMT-1127"
+  },
+  {
+    "type": "PAYEE_MISMATCH",
+    "id": "PMT-1187"
+  },
+  {
+    "type": "UNMATCHED_BANK",
+    "id": "T-90258"
+  },
+  {
+    "type": "UNMATCHED_BANK",
+    "id": "T-90259"
+  },
+  {
+    "type": "UNMATCHED_BANK",
+    "id": "T-90260"
+  },
+  {
+    "type": "SPLIT_TOTAL_MISMATCH",
+    "id": "INV-7001"
+  },
+  {
+    "type": "SPLIT_TOTAL_MISMATCH",
+    "id": "INV-7002"
+  }
+]
