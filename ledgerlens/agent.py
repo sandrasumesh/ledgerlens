@@ -131,8 +131,8 @@ class ReconciliationAgent:
                     "content": output if isinstance(output, str) else json.dumps(output, default=str),
                 })
             messages.append({"role": "user", "content": results})
-        return AgentAnswer(text="I stopped after too many steps without a final answer. "
-                                "Try a narrower question.", tool_calls=calls)
+        return AgentAnswer(text=("I stopped after too many steps without a final answer. "
+                                 "Try a narrower question."), tool_calls=calls)
 
 
 def _block_to_dict(block: Any) -> dict:
@@ -151,10 +151,10 @@ def offline_summary(result: ReconciliationResult) -> str:
     counts = Counter(f.type for f in result.findings)
     sev = Counter(f.severity for f in result.findings)
     lines = [
-        f"Matched {s['matched']} of {s['ledger_entries']} ledger entries to the bank feed "
-        f"({s['matched_by_heuristic']} matched without a reference, {s['in_transit']} still in transit).",
-        f"{s['findings']} findings flag ${s['dollars_flagged']:,.2f}: "
-        f"{sev['high']} high, {sev['medium']} medium, {sev['low']} low.",
+        (f"Matched {s['matched']} of {s['ledger_entries']} ledger entries to the bank feed "
+         f"({s['matched_by_heuristic']} matched without a reference, {s['in_transit']} still in transit)."),
+        (f"{s['findings']} findings flag ${s['dollars_flagged']:,.2f}: "
+         f"{sev['high']} high, {sev['medium']} medium, {sev['low']} low."),
         "",
     ]
     lines += [f"- {kind.replace('_', ' ').title()}: {n}" for kind, n in counts.most_common()]

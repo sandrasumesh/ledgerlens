@@ -21,7 +21,7 @@ st.set_page_config(page_title="LedgerLens", page_icon="🔎", layout="wide")
 def api_key() -> str | None:
     try:
         return st.secrets.get("ANTHROPIC_API_KEY") or os.environ.get("ANTHROPIC_API_KEY")
-    except Exception:
+    except Exception:  # noqa: BLE001 - st.secrets raises different errors across versions
         return os.environ.get("ANTHROPIC_API_KEY")
 
 

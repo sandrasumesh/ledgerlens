@@ -1,5 +1,9 @@
 [tool.ruff]
 line-length = 110
 
+[tool.ruff.lint]
+# dict(...) is used on purpose for keyword-style record building.
+extend-ignore = ["C408"]
+
 [tool.pytest.ini_options]
 testpaths = ["tests"]
